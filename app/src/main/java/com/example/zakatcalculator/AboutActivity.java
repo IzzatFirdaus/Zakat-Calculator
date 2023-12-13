@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,10 @@ public class AboutActivity extends AppCompatActivity {
 
         aboutTextView = findViewById(R.id.about_text_view);
 
+        // Set an OnClickListener for the Visit Website Button
+        Button visitWebsiteButton = findViewById(R.id.buttonVisitWebsite);
+        visitWebsiteButton.setOnClickListener(v -> openWebsite()); // Use lambda expression for OnClickListener
+
         // Initialize aboutLayout within the onCreate() method
         LinearLayout aboutLayout = findViewById(R.id.about_parent);
 
@@ -45,6 +50,7 @@ public class AboutActivity extends AppCompatActivity {
         // Add some animation to the about page
         aboutLayout.setAnimation(AnimationUtils.loadAnimation(this, android.R.anim.fade_in));
     }
+
 
     // Override onCreateOptionsMenu to inflate the menu resource
     @Override
@@ -112,5 +118,11 @@ public class AboutActivity extends AppCompatActivity {
     private int dpToPx() {
         final float scale = getResources().getDisplayMetrics().density;
         return (int) (16 * scale + 0.5f);
+    }
+
+    // Method to open the website
+    private void openWebsite() {
+        String url = getString(R.string.website_url);
+        openBrowserWithUrl(url);
     }
 }
