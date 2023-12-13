@@ -1,3 +1,61 @@
 <resources>
-    <string name="app_name">Zakat Calculator</string>
+    <!-- App Name -->
+    <string name="app_name">ZakatEstimator</string>
+
+    <!-- Button Labels -->
+    <string name="button_calculate">Calculate</string>
+    <string name="button_visit_website">Visit Website</string>
+    <string name="share_app">Share App</string>
+    <string name="calculate_zakat">Calculate</string>
+
+    <!-- Error Messages -->
+    <string name="error_empty_weight">Weight field cannot be empty.</string>
+    <string name="error_empty_value">Value field cannot be empty.</string>
+    <string name="error_negative_weight">Weight must be a positive number.</string>
+    <string name="error_negative_value">Value must be a positive number.</string>
+    <string name="message_no_result">Please calculate the zakat amount first.</string>
+
+    <!-- Input Labels & Hints -->
+    <string name="weight_label">Weight of Gold (grams)</string>
+    <string name="enter_weight_hint">Enter weight</string>
+    <string name="weight_autofill_hints">Weight</string>
+    <string name="value_label">Current Gold Value per Gram</string>
+    <string name="enter_value_hint">Enter value</string>
+    <string name="value_autofill_hints">Value</string>
+
+    <!-- Output Labels -->
+    <string name="result_label">Total Gold Value: </string>
+    <string name="zakat_payable_label">Gold Value for Zakat Payable: </string>
+    <string name="total_zakat_label">Total Zakat: </string>
+
+    <!-- Calculation -->
+    <string name="weight_input_hint">Enter gold weight in grams</string>
+    <string name="value_input_hint">Enter gold price per gram</string>
+
+    <!-- Section Labels -->
+    <string name="section_calculate">Calculate</string>
+    <string name="section_result">Result</string>
+    <string name="section_zakat_payable">Zakat Payable</string>
+    <string name="section_total_zakat">Total Zakat</string>
+    <string name="section_about">About</string>
+    <string name="section_share">Share</string>
+
+    <!-- Share App Content -->
+    <string name="share_app_subject">Zakat Payment Estimation App</string>
+    <string name="share_app_text">I found this great Zakat Payment Estimation App! Check it out: Zakat Payment Estimation App</string>
+
+    <!-- About Section -->
+    <string name="about_us">About the App</string>
+    <string name="about_title">About App</string>
+    <string name="version">Version 1.0</string>
+    <string name="app_description">This application helps users estimate zakat payment for gold keeping. It displays the total gold value and zakat payable based on the provided inputs.</string>
+    <string name="copyright">Copyright 2023</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="about_text">This application helps users estimate zakat payments for gold keeping. The total gold value and zakat payable will be displayed based on the inputs provided.</string>
+    <string name="about_text_2">This application is designed to assist users in calculating zakat for gold. The app computes the total gold value and the gold value eligible for zakat, offering users an estimation of their zakat obligations.</string>
+    <string name="about">About</string>
+    <string name="share">Share</string>
+    <string name="toolbar_description">About</string>
+    <string name="website_url">https://github.com/IzzatFirdaus/Zakat-Calculator</string>
+
 </resources>
