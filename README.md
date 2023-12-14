@@ -37,7 +37,3 @@ Zakat Calculator is a mobile application designed to help users estimate Zakat p
 1. Clone the repository.
 2. Open the project in Android Studio.
 3. Run the application on your device or emulator.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
