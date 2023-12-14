@@ -90,30 +90,28 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            double totalGoldValue = w * v;
+            double goldWeightMinusX;
             double zakatPayableValue;
             double totalZakatValue;
 
-            // Check if "keep" is selected
+            // Calculate Gold Weight minus X (uruf)
             if (isKeepSelected) {
-                if (w <= 85) {
-                    zakatPayableValue = 0;
-                } else {
-                    zakatPayableValue = (w - 85) * v;
-                }
+                goldWeightMinusX = w - 85; // 85 grams for gold keeping category
             } else { // "wear" is selected
-                if (w <= 200) {
-                    zakatPayableValue = 0;
-                } else {
-                    zakatPayableValue = (w - 200) * v;
-                }
+                goldWeightMinusX = w - 200; // 200 grams for gold wearing category
+            }
+
+            if (goldWeightMinusX <= 0) {
+                zakatPayableValue = 0;
+            } else {
+                zakatPayableValue = goldWeightMinusX * v;
             }
 
             totalZakatValue = 0.025 * zakatPayableValue; // Calculate total zakat
 
-            result.setText(String.format(Locale.getDefault(), "%.2f", totalGoldValue));
-            zakatPayable.setText(String.format(Locale.getDefault(), "%.2f", zakatPayableValue));
-            totalZakat.setText(String.format(Locale.getDefault(), "%.2f", totalZakatValue));
+            result.setText(String.format(Locale.getDefault(), "Gold Weight minus uruf (g): %.2f", goldWeightMinusX));
+            zakatPayable.setText(String.format(Locale.getDefault(), "Gold value for Zakat Payable (RM): %.2f", zakatPayableValue));
+            totalZakat.setText(String.format(Locale.getDefault(), "Total Zakat (RM): %.2f", totalZakatValue));
 
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Please enter valid numbers!", Toast.LENGTH_SHORT).show();

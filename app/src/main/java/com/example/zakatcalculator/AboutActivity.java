@@ -36,7 +36,7 @@ public class AboutActivity extends AppCompatActivity {
 
         // Set an OnClickListener for the Visit Website Button
         Button visitWebsiteButton = findViewById(R.id.buttonVisitWebsite);
-        visitWebsiteButton.setOnClickListener(v -> openWebsite()); // Use lambda expression for OnClickListener
+        visitWebsiteButton.setOnClickListener(v -> openWebsite());
 
         // Initialize aboutLayout within the onCreate() method
         LinearLayout aboutLayout = findViewById(R.id.about_parent);
@@ -84,6 +84,16 @@ public class AboutActivity extends AppCompatActivity {
     // Method to share the app
     private void shareApp() {
         // Add code to share the app or perform any specific action related to 'Share'
+        String appName = "Zakat Payment Estimation App";
+        String message = "I found this nice Zakat Payment Estimation App. Check it out: https://github.com/IzzatFirdaus/Zakat-Calculator" + appName;
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, appName);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, message);
+
+        startActivity(Intent.createChooser(shareIntent, "Share with"));
+
         Toast.makeText(this, "Share clicked!", Toast.LENGTH_SHORT).show();
     }
 

@@ -96,7 +96,7 @@
         android:textStyle="bold"
         android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider1" />
+        app:layout_constraintTop_toBottomOf="@id/zakatCalculationResult" />
 
     <TextView
         android:id="@+id/zakatPayable"
@@ -118,6 +118,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/zakatPayable" />
 
+    <TextView
+        android:id="@+id/zakatCalculationResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zakat_calculation_result_label"
+        android:textStyle="bold"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
     <Button
         android:id="@+id/share_button"
         android:layout_width="wrap_content"
@@ -137,6 +147,15 @@
         app:layout_constraintTop_toBottomOf="@id/value"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gold_type"
+            android:textStyle="bold"
+            android:paddingEnd="8dp"
+            android:layout_gravity="center_vertical"/>
 
         <RadioButton
             android:id="@+id/radioButtonKeep"

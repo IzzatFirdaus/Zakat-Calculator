@@ -1,6 +1,6 @@
 <resources>
     <!-- App Name -->
-    <string name="app_name">ZakatEstimator</string>
+    <string name="app_name">ZakatGoldCalculator</string>
 
     <!-- Button Labels -->
     <string name="button_calculate">Calculate</string>
@@ -27,10 +27,12 @@
     <string name="value_autofill_hints">Value</string>
     <string name="gold_type">Select Gold type</string>
 
+
     <!-- Output Labels -->
-    <string name="result_label">Total Gold Value: </string>
-    <string name="zakat_payable_label">Gold Value for Zakat Payable: </string>
-    <string name="total_zakat_label">Total Zakat: </string>
+    <string name="zakat_calculation_result_label">Zakat Calculation result:</string>
+    <string name="result_label">Gold Weight minus uruf (g): </string>
+    <string name="zakat_payable_label">Gold Value for Zakat Payable (RM): </string>
+    <string name="total_zakat_label">Total Zakat (RM): </string>
 
     <!-- Calculation -->
     <string name="weight_input_hint">Enter gold weight in grams</string>
@@ -45,8 +47,8 @@
     <string name="section_share">Share</string>
 
     <!-- Share App Content -->
-    <string name="share_app_subject">Zakat Payment Estimation App</string>
-    <string name="share_app_text">I found this great Zakat Payment Estimation App! Check it out:
+    <string name="share_app_subject">Zakat Gold Calculator App</string>
+    <string name="share_app_text">I found this great Zakat Gold Calculator App! Check it out:
         Zakat Payment Estimation App</string>
 
     <!-- About Section -->
@@ -55,7 +57,7 @@
     <string name="version">Version 1.0</string>
     <string name="app_description">This application helps users estimate zakat payment for gold
         keeping. It displays the total gold value and zakat payable based on the provided inputs.</string>
-    <string name="copyright">Copyright 2023</string>
+    <string name="copyright">Copyright 2023 2021601074</string>
     <string name="visit_website">Visit Website</string>
     <string name="about_text">This application helps users estimate zakat payments for gold keeping.
         The total gold value and zakat payable will be displayed based on the inputs provided.</string>
