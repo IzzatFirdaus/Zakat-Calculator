@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:text="@string/gold_type"
             android:textStyle="bold"
-            android:paddingEnd="8dp"
+            android:padding="8dp"
             android:layout_gravity="center_vertical"/>
 
         <RadioButton
