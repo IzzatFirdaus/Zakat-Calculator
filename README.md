@@ -19,17 +19,6 @@ Zakat Calculator is a mobile application designed to help users estimate Zakat p
 ### Prerequisites
 
 - Android Studio
-- Android device or emulator running Android API 21 or higher
-
-### Installation
-
-1. Clone the repository.
-2. Open the project in Android Studio.
-3. Run the application on your device or emulator.## Getting Started
-
-### Prerequisites
-
-- Android Studio
 - Android device or emulator running Android API 33 or higher
 
 ### Installation
