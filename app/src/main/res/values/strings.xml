@@ -1,4 +1,4 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
     <!-- App Name -->
     <string name="app_name">ZakatEstimator</string>
 
@@ -42,17 +42,22 @@
 
     <!-- Share App Content -->
     <string name="share_app_subject">Zakat Payment Estimation App</string>
-    <string name="share_app_text">I found this great Zakat Payment Estimation App! Check it out: Zakat Payment Estimation App</string>
+    <string name="share_app_text">I found this great Zakat Payment Estimation App! Check it out:
+        Zakat Payment Estimation App</string>
 
     <!-- About Section -->
     <string name="about_us">About the App</string>
     <string name="about_title">About App</string>
     <string name="version">Version 1.0</string>
-    <string name="app_description">This application helps users estimate zakat payment for gold keeping. It displays the total gold value and zakat payable based on the provided inputs.</string>
+    <string name="app_description">This application helps users estimate zakat payment for gold
+        keeping. It displays the total gold value and zakat payable based on the provided inputs.</string>
     <string name="copyright">Copyright 2023</string>
     <string name="visit_website">Visit Website</string>
-    <string name="about_text">This application helps users estimate zakat payments for gold keeping. The total gold value and zakat payable will be displayed based on the inputs provided.</string>
-    <string name="about_text_2">This application is designed to assist users in calculating zakat for gold. The app computes the total gold value and the gold value eligible for zakat, offering users an estimation of their zakat obligations.</string>
+    <string name="about_text">This application helps users estimate zakat payments for gold keeping.
+        The total gold value and zakat payable will be displayed based on the inputs provided.</string>
+    <string name="about_text_2">This application is designed to assist users in calculating zakat
+        for gold. The app computes the total gold value and the gold value eligible for zakat,
+        offering users an estimation of their zakat obligations.</string>
     <string name="about">About</string>
     <string name="share">Share</string>
     <string name="toolbar_description">About</string>
