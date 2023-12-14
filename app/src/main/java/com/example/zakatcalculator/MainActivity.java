@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.content.Intent;
 import android.widget.Toast;
@@ -33,8 +35,12 @@ public class MainActivity extends AppCompatActivity {
         zakatPayable = findViewById(R.id.zakatPayable);
         totalZakat = findViewById(R.id.totalZakat);
         shareButton = findViewById(R.id.share_button);
+        RadioButton radioButtonKeep = findViewById(R.id.radioButtonKeep);
 
-        calculate.setOnClickListener(v -> calculateZakat());
+        calculate.setOnClickListener(v -> calculateZakat(radioButtonKeep.isChecked()));
+
+        Button resetButton = findViewById(R.id.reset);
+        resetButton.setOnClickListener(v -> resetCalculation());
 
         shareButton.setOnClickListener(v -> shareApp());
     }
@@ -66,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    private void calculateZakat() {
+    private void calculateZakat(boolean isKeepSelected) {
         String weightString = weight.getText().toString();
         String valueString = value.getText().toString();
 
@@ -88,13 +94,22 @@ public class MainActivity extends AppCompatActivity {
             double zakatPayableValue;
             double totalZakatValue;
 
-            if (w <= 100) {
-                zakatPayableValue = 0;
-                totalZakatValue = 0;
-            } else {
-                zakatPayableValue = (w - 100) * v;
-                totalZakatValue = 0.025 * totalGoldValue;
+            // Check if "keep" is selected
+            if (isKeepSelected) {
+                if (w <= 85) {
+                    zakatPayableValue = 0;
+                } else {
+                    zakatPayableValue = (w - 85) * v;
+                }
+            } else { // "wear" is selected
+                if (w <= 200) {
+                    zakatPayableValue = 0;
+                } else {
+                    zakatPayableValue = (w - 200) * v;
+                }
             }
+
+            totalZakatValue = 0.025 * zakatPayableValue; // Calculate total zakat
 
             result.setText(String.format(Locale.getDefault(), "%.2f", totalGoldValue));
             zakatPayable.setText(String.format(Locale.getDefault(), "%.2f", zakatPayableValue));
@@ -103,6 +118,17 @@ public class MainActivity extends AppCompatActivity {
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Please enter valid numbers!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void resetCalculation() {
+        weight.setText(""); // Reset weight field
+        value.setText(""); // Reset value field
+        result.setText(getString(R.string.result_label)); // Reset result field
+        zakatPayable.setText(getString(R.string.zakat_payable_label)); // Reset zakatPayable field
+        totalZakat.setText(getString(R.string.total_zakat_label)); // Reset totalZakat field
+        // Uncheck radio buttons if needed
+        RadioGroup radioGroupGoldType = findViewById(R.id.radioGroupGoldType);
+        radioGroupGoldType.clearCheck();
     }
 
     private void shareApp() {

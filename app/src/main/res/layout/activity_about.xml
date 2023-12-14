@@ -77,16 +77,6 @@
         app:layout_constraintTop_toBottomOf="@id/textViewCopyright"
         android:padding="16dp"/>
 
-    <!-- WebView -->
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonVisitWebsite"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
     <!-- AboutTextView -->
     <TextView
         android:id="@+id/about_text_view"

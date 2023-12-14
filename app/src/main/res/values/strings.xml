@@ -7,6 +7,9 @@
     <string name="button_visit_website">Visit Website</string>
     <string name="share_app">Share App</string>
     <string name="calculate_zakat">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="gold_type_Keep">Keep</string>
+    <string name="gold_type_Wear">Wear</string>
 
     <!-- Error Messages -->
     <string name="error_empty_weight">Weight field cannot be empty.</string>
@@ -19,9 +22,10 @@
     <string name="weight_label">Weight of Gold (grams)</string>
     <string name="enter_weight_hint">Enter weight</string>
     <string name="weight_autofill_hints">Weight</string>
-    <string name="value_label">Current Gold Value per Gram</string>
+    <string name="value_label">Current Gold Value per Gram (RM)</string>
     <string name="enter_value_hint">Enter value</string>
     <string name="value_autofill_hints">Value</string>
+    <string name="gold_type">Select Gold type</string>
 
     <!-- Output Labels -->
     <string name="result_label">Total Gold Value: </string>
